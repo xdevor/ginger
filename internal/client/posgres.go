@@ -15,13 +15,15 @@ func NewPostgres() (db *gorm.DB, err error) {
 		password=%s
 		dbname=%s
 		port=%s
-		sslmode=disable
-		TimeZone=Asia/Taipei`,
+		sslmode=%s
+		TimeZone=%s`,
 		config.Database.Host,
 		config.Database.User,
 		config.Database.Password,
 		config.Database.Database,
 		config.Database.Port,
+		config.Database.SSLMode,
+		config.Database.Timezone,
 	)
 
 	db, err = gorm.Open(postgres.Open(dsn), &gorm.Config{})

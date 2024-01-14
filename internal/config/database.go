@@ -13,6 +13,8 @@ type DatabaseConfig struct {
 	User     string
 	Password string
 	Database string
+	SSLMode  string
+	Timezone string
 }
 
 var Database DatabaseConfig = DatabaseConfig{
@@ -21,4 +23,6 @@ var Database DatabaseConfig = DatabaseConfig{
 	User:     os.Getenv("DB_USERNAME"),
 	Password: os.Getenv("DB_PASSWORD"),
 	Database: os.Getenv("DB_DATABASE"),
+	SSLMode:  os.Getenv("DB_SSLMODE"),
+	Timezone: os.Getenv("DB_TIMEZONE"),
 }
