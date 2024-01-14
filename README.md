@@ -12,7 +12,9 @@ A Golang web backend development starter template power by gin
 - Others:
     - Implement .env config with [joho/godotenv](https://github.com/joho/godotenv)
     - Implement database migration with [pressly/goose](https://github.com/pressly/goose)
-    - Implement 
+
+## Contributing
+Welcome everyone to open PR and issue
 
 
 
