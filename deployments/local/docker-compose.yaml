@@ -1,0 +1,23 @@
+version: '3.7'
+
+services:
+  api-server:
+    image: cosmtrek/air
+    container_name: api-server
+    working_dir: /ginger
+    ports:
+      - 8080:8080
+    volumes:
+      - ../..:/ginger
+      - ./.air.toml:/ginger/.air.toml
+
+  postgres:
+    image: postgres:16
+    container_name: postgres_16
+    environment: 
+      POSTGRES_USER: root 
+      POSTGRES_PASSWORD: root
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./data:/var/lib/postgresql/data
